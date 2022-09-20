@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{anowar2021conceptual}
+F.~Anowar, S.~Sadaoui, and B.~Selim.
+\newblock Conceptual and empirical comparison of dimensionality reduction
+  algorithms (pca, kpca, lda, mds, svd, lle, isomap, le, ica, t-sne).
+\newblock {\em Computer Science Review}, 40:100378, 2021.
+
+\bibitem{koppen2000curse}
+M.~K{\"o}ppen.
+\newblock The curse of dimensionality.
+\newblock In {\em 5th online world conference on soft computing in industrial
+  applications (WSC5)}, volume~1, pages 4--8, 2000.
+
+\bibitem{liu2018spectral}
+J.~Liu and J.~Han.
+\newblock Spectral clustering.
+\newblock In {\em Data clustering}, pages 177--200. Chapman and Hall/CRC, 2018.
+
+\bibitem{o1982measures}
+K.~E. O'Grady.
+\newblock Measures of explained variance: Cautions and limitations.
+\newblock {\em Psychological Bulletin}, 92(3):766, 1982.
+
+\bibitem{reynolds2009gaussian}
+D.~A. Reynolds.
+\newblock Gaussian mixture models.
+\newblock {\em Encyclopedia of biometrics}, 741(659-663), 2009.
+
+\bibitem{shahapure2020cluster}
+K.~R. Shahapure and C.~Nicholas.
+\newblock Cluster quality analysis using silhouette score.
+\newblock In {\em 2020 IEEE 7th International Conference on Data Science and
+  Advanced Analytics (DSAA)}, pages 747--748. IEEE, 2020.
+
+\bibitem{syakur2018integration}
+M.~Syakur, B.~Khotimah, E.~Rochman, and B.~D. Satoto.
+\newblock Integration k-means clustering method and elbow method for
+  identification of the best customer profile cluster.
+\newblock In {\em IOP conference series: materials science and engineering},
+  volume 336, page 012017. IOP Publishing, 2018.
+
+\end{thebibliography}
