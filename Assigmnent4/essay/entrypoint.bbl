@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{dhanabal2015study}
+L.~Dhanabal and S.~Shantharajah.
+\newblock A study on nsl-kdd dataset for intrusion detection system based on
+  classification algorithms.
+\newblock {\em International journal of advanced research in computer and
+  communication engineering}, 4(6):446--452, 2015.
+
+\bibitem{johnson2018fault}
+J.~M. Johnson and A.~Yadav.
+\newblock Fault detection and classification technique for hvdc transmission
+  lines using knn.
+\newblock In {\em Information and communication technology for sustainable
+  development}, pages 245--253. Springer, 2018.
+
+\bibitem{kilincer2021machine}
+I.~F. Kilincer, F.~Ertam, and A.~Sengur.
+\newblock Machine learning methods for cyber security intrusion detection:
+  Datasets and comparative study.
+\newblock {\em Computer Networks}, 188:107840, 2021.
+
+\bibitem{mahfouz2020comparative}
+A.~M. Mahfouz, D.~Venugopal, and S.~G. Shiva.
+\newblock Comparative analysis of ml classifiers for network intrusion
+  detection.
+\newblock In {\em Fourth international congress on information and
+  communication technology}, pages 193--207. Springer, 2020.
+
+\end{thebibliography}

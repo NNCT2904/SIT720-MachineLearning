@@ -1,0 +1,69 @@
+\section{The Problem, Motivation and Related Works} \label{Sec: Problem}
+
+The increase development of technologies comes with security problem.
+Many attack can negatively affect the operation of the system due to such security gaps.
+In this assignment, we conduct a comparative study to investigate the performance of different machine learning models in detecting potential security breaches using the datase \emph{NSL-KDD}.
+The results of our study will then be compared to the paper by Ilhan et al \cite{kilincer2021machine}.
+
+We implement a range of machine learning models according to Ilhan et al \cite{kilincer2021machine} and propose our own novelty solution.
+Overall, our voting model has reached the score close to the highest
+
+\subsection{The Dataset and Pre-processing}
+We will be using the dataset \emph{NSL-KDD} as the data input for our models.
+NSL-KDD dataset contains approximately 15000 records of different attacks types.
+In general, we can classify the attack types into four classes \cite{dhanabal2015study, mahfouz2020comparative}:
+\begin{itemize}
+    \item \textbf{DoS}: [apache2, back, pod, processtable, worm, neptune, smurf, land, udpstorm, teardrop]
+    \item \textbf{Probe}: [satan, ipsweep, nmap, portsweep, mscan, saint]
+    \item \textbf{R2L}: [guess\_passwd, ftp\_write, imap, phf, multihop, warezmaster, warezclient, spy, xlock, xsnoop, snmpguess, snmpgetattack, httptunnel, sendmail, named]
+    \item \textbf{U2R}: [buffer\_overflow, xterm, sqlattack, perl, loadmodule, ps, rootkit]
+\end{itemize}
+
+For each attack type in the dataset, we map to the equivalence attack class.
+According to the paper by Ilhan et al. \cite{kilincer2021machine} the \emph{Normal} class has 6817 records,
+11617 records for \emph{DoS}, 988 for \emph{Probe}, 53 for \emph{R2L} and 3086 for \emph{U2R}.
+We thus reduce the number of record by randomly select the entries belongs to each classes for our data to match with the dataset used in the literature \cite{kilincer2021machine}.
+
+\subsection{Machine Learning Models and Train/Test Spliting Strategy}
+In the origrinal paper by Ilhan et al. \cite{kilincer2021machine}, there are eight machine learning models employed to classify our data, the specification of each machine learning model are implemented in SKlearn library \cite{johnson2018fault}:
+\begin{itemize}
+    \item \textbf{SVM Linear}: the \texttt{svm.LinearSVC} class.
+    \item \textbf{SVM Quadratic}: \texttt{svm.SVC} class with polynomial kernel of degree 2.
+    \item \textbf{SVM Cubic}: \texttt{svm.SVC} class with polynomial kernel of degree 3.
+    \item \textbf{KNN Fine}: the \texttt{KNeighborsClassifier} class with 1 neighbor.
+    \item \textbf{KNN Medium}: the \texttt{KNeighborsClassifier} class with 10 neighbors.
+    \item \textbf{KNN Cubic}: \texttt{KNeighborsClassifier} class of Power parameter 3 with 10 neighbors.
+    \item \textbf{Decision Tree Fine}: the \texttt{DecisionTreeClassifier} class with at least 100 splits. We have chosen the depth 7, which would result in 127 splits in the tree.
+    \item \textbf{Decision Tree Medium}: the \texttt{DecisionTreeClassifier} class with at least 20 splits. We have chosen the depth 5, which would result in 31 splits in the tree.
+\end{itemize}
+
+
+The performance of the dataset will be compared by the \emph{Accuracy}, \emph{Precision}, \emph{Recall}, \emph{Geometric Meam} and \emph{F1} metrics.
+The equations for each metric are given as Eqs.\ref{eqn: accuracy}, \ref{eqn: precision}, \ref{eqn: recall}, \ref{eqn: gmean}, and \ref{eqn: f1}.
+We will be running 10 K-fold cross validation of 100 iterations for each classifiers.
+
+\begin{equation}
+    \mbox{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+    \label{eqn: accuracy}
+\end{equation}
+
+\begin{equation}
+    \mbox{Precision} = \frac{TP}{TP+FP}
+    \label{eqn: precision}
+\end{equation}
+
+\begin{equation}
+    \mbox{Geometric\_mean} = \sqrt{ \frac{TP * TN}{(TP+FN)*(TN+FP)}}
+    \label{eqn: gmean}
+\end{equation}
+
+\begin{equation}
+    \mbox{Recall} = \frac{TP}{TP + FN}
+    \label{eqn: recall}
+\end{equation}
+
+\begin{equation}
+    \mbox{F1} = \frac{2TP}{2TP + FP + FN}
+    \label{eqn: f1}
+\end{equation}
+

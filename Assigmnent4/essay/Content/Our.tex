@@ -1,0 +1,21 @@
+\section{Our Solution}
+
+In our solution, we employ two ensemble machine learning models.
+Ensemble learning is a combination of many machine learning models to solve a problem.
+Machine learning models have their own limitations and weaknesses. If we combine those models, then we can boost the overall accuracy by aggregating the output of those models.
+Ensemble works best when the base models are not correlated with each other.
+The idea is that those models can fulfil each other's weaknesses.
+
+The first ensemble method we implement is a Voting classifiers.
+This will utilise the results from four different weak learners to perform prediction.
+The four learners in our case are: a linear SVC, a KNN fine, a decision tree fine, and a linear classifier with stochastic gradient descent training.
+
+The secone ensemble method is AdaBoosting.
+AdaBoost (adaptive boosting) is a machine learning model that used as an ensemble method.
+The idea is to use multiple classifiers to increase the accuracy of overall classifier.
+The classifiers are built on top of each other iteratively.
+Any machine learning model can be used the base classifier.
+We have chosen Linear Support Vector Machine as our base estimator, the booster will use 50 of this estimator to obtain the prediction.
+
+The same dataset and K-fold cross validation process are used for both classifiers.
+The result of our solutions is discussed in Section \ref{Sec: Result}
